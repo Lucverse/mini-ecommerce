@@ -9,7 +9,7 @@ var myStyle = {
 };
 function Result(props) {
   let data = useSelector((store) => {
-    return store;
+    return store; 
   })
 
   return (

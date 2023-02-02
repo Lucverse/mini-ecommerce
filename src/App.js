@@ -1,14 +1,20 @@
-import "./App.css";
-import Input from "./Components/Input";
-import Result from "./Components/Result";
+import { Route, Routes } from "react-router-dom";
+import AllRoutes from "./Routes/AllRoutes";
+import PrivateRoute from "./Components/PrivateRoute";
+import Dashboard from "./Routes/Dashboard";
 
-function App() {
-  return (
-    <div className="App">
-      <Input />
-      <Result />
-    </div>
-  );
+export default function App() {
+  return <div className="App">
+    <AllRoutes />
+    <Routes>
+      <Route
+        path='/dashboard'
+        element={
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        }
+      />
+    </Routes>
+  </div>;
 }
-
-export default App;
