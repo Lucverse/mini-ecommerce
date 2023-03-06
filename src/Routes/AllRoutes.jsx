@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import ProductPage from "../Components/Product/ProductPage";
-import { useSearchParams } from "react-router-dom";
 import '../App.css'
 import CartPage from "../Components/Cart/CartPage";
 import Orders from "../Components/Orders/Orders";

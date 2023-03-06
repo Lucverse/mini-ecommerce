@@ -1,9 +1,8 @@
-import { Route } from "react-router-dom";
 
 function ProductCard({ title, price, image, category, brand }) {
     // console.log(brand);
     return (
-        <div className="ProductCard">
+        <div className="ProductCard" style={{color:'black'}}>
             <img data-testid="product-image" src={image} height="250px" alt={title} />
             <b data-testid="product-title">{title}</b>
             <span data-testid="product-price">₹ {price}</span>

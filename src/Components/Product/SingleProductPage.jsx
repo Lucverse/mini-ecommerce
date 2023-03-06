@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from "react";
-import Loading from "../Loading/Loading";
 import { useParams } from "react-router-dom";
 function SingleProductPage() {
 
     const { id } = useParams();
     console.log(id);
     const [state, setState] = useState([]);
-    const [isLoader, setIsLoader] = useState(false);
     useEffect(() => {
-        setIsLoader(true);
         fetch(`https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products/${id}`)
             .then((res) => res.json())
             .then((data => {
                 setState(data.data);
-                setIsLoader(false);
             }))
     }, [id]);
     return (
