@@ -1,20 +1,8 @@
-import { Route, Routes } from "react-router-dom";
 import AllRoutes from "./Routes/AllRoutes";
-import PrivateRoute from "./Components/PrivateRoute";
-import Dashboard from "./Routes/Dashboard";
-
+import Navbar from "./Components/Navbar/Navbar";
 export default function App() {
   return <div className="App">
+    <Navbar/>
     <AllRoutes />
-    <Routes>
-      <Route
-        path='/dashboard'
-        element={
-          <PrivateRoute>
-            <Dashboard />
-          </PrivateRoute>
-        }
-      />
-    </Routes>
   </div>;
 }
