@@ -13,17 +13,24 @@ function SingleProductPage() {
             }))
     }, [id]);
     return (
-        <div>
+        <div className="mainSingleProudctCard">
             <div className="SingleProductCard">
-                <img data-testid="product-image" src={state.image} height="250px" alt={state.title} />
-                <b data-testid="product-title">{state.title}</b>
-                <span data-testid="product-price">₹ {state.price}</span>
-                <p data-testid="product-category">{state.category}</p>
-                <p data-testid="product-category">{state.brand}</p>
-                <button>Add to Cart</button>
-
+                <div className="product-image">
+                    <img  src={state.image} height="300px" alt={state.title} />
+                </div>
+                <div>
+                    <h1 data-testid="product-title">{state.title}</h1>
+                    <p data-testid="product-price">Price : ₹ {state.price}</p>
+                    <h3 data-testid="product-category">{state.category}</h3>
+                    <p>Description</p>
+                    <p>Alskjdfm lxckj wsoi2 msc skldj20sdfasdlfjasd fasldfa sdfjlas lasjkdflasmd alskdcjasldkcmn29oijfa asbcdasdcAlskjdfm
+                        Alskjdfm lxckj wsoi2 msc skldj20sdfasdlfjasd fasldfa sdfjlas lasjkdflasmd alskdcjasldkcmn29oijfa asbcdasdcAlskjdfm
+                        Alskjdfm lxckj wsoi2 msc skldj20sdfasdlfjasd fasldfa sdfjlas lasjkdflasmd alskdcjasldkcmn29oijfa asbcdasdcAlskjdfm
+                    </p>
+                    <p data-testid="product-category">{state.brand}</p>
+                </div>
             </div>
-
+            <button className="button-css">Add to Cart</button>
         </div>
     )
 }

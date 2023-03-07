@@ -57,23 +57,38 @@
 }
 .ProductCard{
   height: 400px;
-  border: 1px solid black;
   display: flex;
   gap: 1rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  border-radius: 10px;
+  padding: 20px 0px 10px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.ProductCard img{
+  border-radius: 5px;
 }
 .SingleProductCard{
-  border: 1px solid black;
-  display: flex;
   gap: 1rem;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }
-
-
+.mainSingleProudctCard{
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.product-image{
+  margin: auto;
+}
+.product-image img{
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 /* Loading  */
 .loadingDiv {
   margin: auto;
@@ -195,7 +210,7 @@
   width: auto;
   padding: 5px 20px;
  }
-.FilterDiv button, .paginationDiv button{
+.FilterDiv button, .paginationDiv button, .button-css{
   background-color: #fff;
   border: 1px solid #d5d9d9;
   border-radius: 8px;
@@ -219,18 +234,18 @@
   width: 100px;
 }
 
-.paginationDiv  button:hover, .FilterDiv button:hover{
+.paginationDiv  button:hover, .FilterDiv button:hover, .button-css :hover{
   background-color: rgba(128, 128, 128, 0.1);
 }
 
-.paginationDiv  button:focus, .FilterDiv button:focus{
+.paginationDiv  button:focus, .FilterDiv button:focus, .button-css:focus{
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
   outline: 0;
 }
-.paginationDiv  button:active, .FilterDiv button:active{
+.paginationDiv  button:active, .FilterDiv button:active, .button-css:active{
   background-color: rgba(128, 128, 128, 0.493);
 }
-.paginationDiv  button:disabled{
+.paginationDiv  button:disabled, .button-css:disabled{
   cursor:default;
   color: rgb(204, 204, 204);
   background-color: #fff;
