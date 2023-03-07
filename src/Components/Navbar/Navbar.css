@@ -1,7 +1,12 @@
 .navbar {
-    height: 50px;
+    height: 20px;
     background-color: black;
     color: white;
     display: flex;
-    justify-content: space-between;  
-  }
+    padding: 20px;
+    justify-content: space-evenly;  
+}
+.navbar a{
+  color: white;
+  text-decoration: none;
+}
