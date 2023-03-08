@@ -1,48 +1,28 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { removeFromCart } from './cartActions';
+// CartPage.js
 
-function CartPage(props) {
-  const { cartItems, removeFromCart } = props;
+import { useSelector } from "react-redux";
+import { selectCartItems, selectCartTotal, selectCartItemCount } from "./cartSelectors";
 
-  const handleRemove = (id) => {
-    removeFromCart(id);
-  };
 
-  const cartItemsList = cartItems.map(item => (
-    <div key={item.id}>
-      <img src={item.image} alt={item.title} />
-      <p>{item.title}</p>
-      <p>{item.quantity} x {item.price}</p>
-      <button onClick={() => handleRemove(item.id)}>Remove</button>
-    </div>
-  ));
-
-  const totalPrice = cartItems.reduce((total, item) => total + (item.quantity * item.price), 0);
-  const deliveryCharge = 50;
-  const grandTotal = totalPrice + deliveryCharge;
+const CartPage = () => {
+  const cartItems = useSelector(selectCartItems);
+  const cartTotal = useSelector(selectCartTotal);
+  const cartItemCount = useSelector(selectCartItemCount);
 
   return (
     <div>
-      {cartItemsList}
-      <p>Total Price: {totalPrice}</p>
-      <p>Delivery Charge: {deliveryCharge}</p>
-      <p>Grand Total: {grandTotal}</p>
-      <button>Place Order</button>
+      <h1>Cart</h1>
+      {cartItems.map((item) => (
+        <div key={item.id}>
+          <p>{item.name}</p>
+          <p>{item.price}</p>
+          <p>{item.quantity}</p>
+        </div>
+      ))}
+      <p>Total: ${cartTotal}</p>
+      <p>Quantity: {cartItemCount}</p>
     </div>
   );
-}
-
-const mapStateToProps = (state) => {
-  return {
-    cartItems: state.cart.cartItems
-  };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    removeFromCart: (id) => dispatch(removeFromCart(id))
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(CartPage);
+export default CartPage;
