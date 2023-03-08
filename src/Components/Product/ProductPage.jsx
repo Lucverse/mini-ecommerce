@@ -29,7 +29,7 @@ function ProductPage() {
         setCategory(f);
     }
     return (
-        <div>
+        <div className="productpage">
             <h1>Product Page</h1>
             <div>
                 {
@@ -55,7 +55,6 @@ function ProductPage() {
                         </div>
                 }
             </div>
-
         </div>
     )
 }

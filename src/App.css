@@ -1,7 +1,12 @@
 .App {
+  background-color: #eeeeee;
   text-align: center;
+  padding-bottom: 10px;
+  min-height: 98vh;
+  min-width: min-content;
 }
-.App a{
+
+.App a {
   text-decoration: none;
 }
 
@@ -44,18 +49,40 @@
 .navbar {
   height: 50px;
   background-color: black;
-  display: flex;  
+  display: flex;
 }
-.productdiv{
+
+.productdiv {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 20px;
 }
-.productdiv text{
+
+@media only screen and (max-width: 1024px) {
+  .productdiv {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .productdiv {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .productdiv {
+    grid-template-columns: auto;
+  }
+}
+
+.productdiv text {
   color: black;
 }
-.ProductCard{
+
+.ProductCard {
   height: 400px;
   display: flex;
   gap: 1rem;
@@ -67,28 +94,35 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.ProductCard img{
+.ProductCard img {
   border-radius: 5px;
 }
-.SingleProductCard{
+
+.SingleProductCard {
   gap: 1rem;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
-.mainSingleProudctCard{
+
+.mainSingleProudctCard {
+  background-color: white;
   margin: auto;
   padding: 20px;
+  margin-top: 100px;
   border-radius: 10px;
   width: 60%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.product-image{
+
+.product-image {
   margin: auto;
 }
-.product-image img{
+
+.product-image img {
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 /* Loading  */
 .loadingDiv {
   margin: auto;
@@ -201,16 +235,20 @@
   }
 }
 
-.FilterDiv{
+.FilterDiv {
   display: flex;
   justify-content: space-between;
   margin: 20px;
 }
- .FilterDiv> div>button{
+
+.FilterDiv>div>button {
   width: auto;
   padding: 5px 20px;
- }
-.FilterDiv button, .paginationDiv button, .button-css{
+}
+
+.FilterDiv button,
+.paginationDiv button,
+.button-css {
   background-color: #fff;
   border: 1px solid #d5d9d9;
   border-radius: 8px;
@@ -219,7 +257,7 @@
   color: #0f1111;
   cursor: pointer;
   display: inline-block;
-  font-family: "Amazon Ember",sans-serif;
+  font-family: "Amazon Ember", sans-serif;
   font-size: 13px;
   line-height: 29px;
   padding: 0 10px 0 11px;
@@ -234,23 +272,33 @@
   width: 100px;
 }
 
-.paginationDiv  button:hover, .FilterDiv button:hover, .button-css :hover{
+.paginationDiv button:hover,
+.FilterDiv button:hover,
+.button-css :hover {
   background-color: rgba(128, 128, 128, 0.1);
 }
 
-.paginationDiv  button:focus, .FilterDiv button:focus, .button-css:focus{
+.paginationDiv button:focus,
+.FilterDiv button:focus,
+.button-css:focus {
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
   outline: 0;
 }
-.paginationDiv  button:active, .FilterDiv button:active, .button-css:active{
+
+.paginationDiv button:active,
+.FilterDiv button:active,
+.button-css:active {
   background-color: rgba(128, 128, 128, 0.493);
 }
-.paginationDiv  button:disabled, .button-css:disabled{
-  cursor:default;
+
+.paginationDiv button:disabled,
+.button-css:disabled {
+  cursor: default;
   color: rgb(204, 204, 204);
   background-color: #fff;
   border: 1px solid #d5d9d9;
 }
-.paginationDiv{
+
+.paginationDiv {
   margin: 10px 0px 50px 0px;
 }

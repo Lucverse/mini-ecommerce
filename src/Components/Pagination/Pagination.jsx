@@ -3,7 +3,7 @@ function Pagination({ updatePage, page }) {
         onClick={() => updatePage(page - 1)}
         disabled={page <= 1}
     >PREV</button>;
-    const currentPage = <button >{page}</button>;
+    const currentPage = <button disabled={true} >{page}</button>;
     const next = <button
         onClick={() => updatePage(page + 1)}
         disabled={page >= 4}

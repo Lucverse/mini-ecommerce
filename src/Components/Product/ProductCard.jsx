@@ -1,7 +1,7 @@
 
 function ProductCard({ title, price, image, category, brand }) {
     return (
-        <div className="ProductCard" style={{ color: 'black' }}>
+        <div className="ProductCard" style={{ color: 'black', backgroundColor:'white' }}>
             <img data-testid="product-image" src={image} height="250px" alt={title} />
             <b data-testid="product-title">{title}</b>
             <span data-testid="product-price">₹{price}</span>
