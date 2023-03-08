@@ -11,7 +11,6 @@ function ProductCard({ title, price, image, category, brand }) {
                 <p >{category}</p>
                 <p >{brand}</p>
             </div>
-
         </div>
     )
 }
