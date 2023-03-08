@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 function SingleProductPage() {
 
     const { id } = useParams();
-    console.log(id);
     const [state, setState] = useState([]);
     useEffect(() => {
         fetch(`https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products/${id}`)
