@@ -18,15 +18,15 @@ function SingleProductPage() {
                     <img  src={state.image} height="300px" alt={state.title} />
                 </div>
                 <div>
-                    <h1 data-testid="product-title">{state.title}</h1>
-                    <p data-testid="product-price">Price : ₹ {state.price}</p>
-                    <h3 data-testid="product-category">{state.category}</h3>
+                    <h1 >{state.title}</h1>
+                    <p >Price : ₹ {state.price}</p>
+                    <h3>{state.category}</h3>
                     <p>Description</p>
                     <p>Alskjdfm lxckj wsoi2 msc skldj20sdfasdlfjasd fasldfa sdfjlas lasjkdflasmd alskdcjasldkcmn29oijfa asbcdasdcAlskjdfm
                         Alskjdfm lxckj wsoi2 msc skldj20sdfasdlfjasd fasldfa sdfjlas lasjkdflasmd alskdcjasldkcmn29oijfa asbcdasdcAlskjdfm
                         Alskjdfm lxckj wsoi2 msc skldj20sdfasdlfjasd fasldfa sdfjlas lasjkdflasmd alskdcjasldkcmn29oijfa asbcdasdcAlskjdfm
                     </p>
-                    <p data-testid="product-category">{state.brand}</p>
+                    <p >{state.brand}</p>
                 </div>
             </div>
             <button className="button-css">Add to Cart</button>
