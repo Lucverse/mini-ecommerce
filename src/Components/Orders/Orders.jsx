@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import NoItem from "../Cart/NoItem";
 
 const Orders = () => {
     const [orders, setOrders] = useState([]);
@@ -35,7 +36,7 @@ const Orders = () => {
                     ))}
                 </div>
             ) : (
-                <p>No orders found.</p>
+                <NoItem/>
             )}
 
         </div>

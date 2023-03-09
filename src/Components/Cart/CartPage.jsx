@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import NoItem from "./NoItem";
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -112,7 +113,8 @@ const CartPage = () => {
               <div className="done text">Done</div>
             </button>
           </div>
-          : <h1>No Items In Cart</h1>
+          :
+          <NoItem />
       }
     </div >
   );
