@@ -1,5 +1,4 @@
 function Pagination({ updatePage, page, totalPages}) {
-    console.log(totalPages);
     const prev = <button
         onClick={() => updatePage(page - 1)}
         disabled={page <= 1}

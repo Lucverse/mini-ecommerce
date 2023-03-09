@@ -38,7 +38,7 @@ function SingleProductPage() {
 
     return (
         <div className="mainSingleProudctCard">
-            <div className="" id="test">
+            <div className="" >
                 <div >
                     <img src={state.image} height="300px" alt={state.title} />
                 </div>
@@ -47,9 +47,8 @@ function SingleProductPage() {
                     <p><span style={{ fontWeight: 'bold' }}>Price: </span> ₹ {state.price}</p>
                     <p><span style={{ fontWeight: 'bold' }}>Category: </span>{state.category}</p>
                     <p><span style={{ fontWeight: 'bold' }}>Brand: </span>{state.brand}</p>
-                    <h3 style={{ textDecoration: 'underline' }}>Description</h3>
-                    <p style={{ fontFamily: 'italic', fontStyle: 'oblique' }}>
-                        Description
+                    <p>
+                        Introducing our latest product, a high-quality item designed to meet your needs. It boasts an impressive array of features and comes in a sleek and modern design. This product is durable, easy to use and perfect for anyone looking for a reliable and practical solution.
                     </p>
                 </div>
             </div>
