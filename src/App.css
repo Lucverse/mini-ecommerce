@@ -78,6 +78,11 @@
   .productdiv {
     grid-template-columns: auto;
   }
+  .mainSingleProudctCard .SingleProductCard{
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+  }
 }
 
 .productdiv text {
@@ -85,20 +90,15 @@
 }
 
 .ProductCard {
-  display: flex;
   gap: 1rem;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
   border-radius: 10px;
-  min-height: 300px;
   padding: 20px 0px 10px 0px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: grid;
+  grid-template-rows: repeat(2,1fr);
 }
-
 .ProductCard img {
   border-radius: 5px;
-  width: 90%;
 }
 
 .SingleProductCard {
@@ -106,12 +106,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-
 .mainSingleProudctCard {
   background-color: white;
   margin: auto;
   padding: 20px;
-  margin-top: 100px;
+  margin-top: 2%;
   border-radius: 10px;
   width: 60%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -315,17 +314,16 @@
   padding: 50px;
   gap: 50px;
 }
-
 @media only screen and (max-width: 1024px) {
-
   .ordersPage,
   .cartPage {
     padding: 20px;
   }
-
-  .product-image img,
   .product-image img {
     width: 150px;
+  }
+  .mainSingleProudctCard{
+    width: 80%;
   }
 }
 
@@ -341,8 +339,10 @@
     grid-template-rows: auto;
     padding: 20px;
   }
+  .mainSingleProudctCard{    
+    width: 90%;
+  }
 }
-
 .cartPage .SingleProductCard,
 .ordersPage .SingleProductCard {
   padding: 20px;

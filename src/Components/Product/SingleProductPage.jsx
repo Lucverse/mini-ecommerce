@@ -17,7 +17,7 @@ function SingleProductPage() {
             alert("Item added to your cart!", "alert-success");
         }
     };
-    
+
     function alert(message, className) {
         const div = document.createElement("div");
         div.className = `alert ${className}`;
@@ -25,7 +25,7 @@ function SingleProductPage() {
         document.body.appendChild(div);
         setTimeout(() => {
             div.remove();
-        }, 3000);
+        }, 1000);
     }
 
     useEffect(() => {
@@ -38,8 +38,8 @@ function SingleProductPage() {
 
     return (
         <div className="mainSingleProudctCard">
-            <div className="SingleProductCard">
-                <div className="product-image">
+            <div className="" id="test">
+                <div >
                     <img src={state.image} height="300px" alt={state.title} />
                 </div>
                 <div>
