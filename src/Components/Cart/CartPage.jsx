@@ -23,8 +23,11 @@ const CartPage = () => {
       newCartItems[index].quantity -= 1;
       setCartItems(newCartItems);
       localStorage.setItem("cart", JSON.stringify(newCartItems));
+    } else {
+      removeItem(item);
     }
   };
+
 
   const removeItem = (item) => {
     const newCartItems = cartItems.filter((x) => x.id !== item.id);
@@ -41,28 +44,52 @@ const CartPage = () => {
     (acc, item) => acc + item.price * item.quantity,
     0
   );
+
+  const placeOrder = () => {
+    alert("Order placed successfully!");
+    setCartItems([]);
+    localStorage.removeItem("cart");
+  };
+
   return (
     <div>
       <h1>Cart</h1>
-      <p>Total: ₹{cartTotal}</p>
-      <p>Quantity: {cartItemCount}</p>
-      {cartItems.map((item) => (
-        <div className="ProductCard" style={{ color: 'black', backgroundColor: 'white' }}>
+      {
+        cartItemCount ?
           <div>
-            <img src={item.image} alt={item.title} />
+            <p>
+              Total: ₹{cartTotal} + ₹50 delivery charge
+            </p>
+            <p>Total Items: {cartItemCount}</p>
+            <div className="cartPage">
+              {cartItems.map((item) => (
+                <div
+                  className="SingleProductCard"
+                  style={{ color: "black", backgroundColor: "white" }}
+                  key={item.id}
+                >
+                  <div className="product-image">
+                    <img src={item.image} alt={item.title} />
+                  </div>
+                  <div >
+                    <h2>{item.title}</h2>
+                    <h4>₹{item.price}</h4>
+                    <span>
+                      <span style={{ fontWeight: "bold" }}>Quantity: </span>
+                      {item.quantity}
+                    </span>
+                    <div className="cart-buttons">
+                      <button onClick={() => decrementQuantity(item)}>-</button>
+                      <button onClick={() => incrementQuantity(item)}>+</button>
+                    </div>
+                  </div>
+                </div>
+              ))
+              }
+            </div>
+            <button onClick={placeOrder}>Place Order</button>
           </div>
-          <div className="ProductCard2">
-            <h2 >{item.title}</h2>
-            <h4 >₹{item.price}</h4>
-          </div>
-          <div>
-            <button onClick={() => decrementQuantity(item)}>-</button>
-            <span>{item.quantity}</span>
-            <button onClick={() => incrementQuantity(item)}>+</button>
-          </div>
-          <button onClick={() => removeItem(item)}>Remove</button>
-        </div>
-      ))
+          : <h1>No Items In Cart</h1>
       }
     </div >
   );
