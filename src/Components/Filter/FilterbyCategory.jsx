@@ -1,12 +1,46 @@
-function FilterbyCategory({filterbyCategory}){
-    return (
-        <div>
-            <button onClick={()=>filterbyCategory(`&filter=men`)}>Men</button>
-            <button onClick={()=>filterbyCategory(`&filter=women`)}>Women</button>
-            <button onClick={()=>filterbyCategory(`&filter=kids`)}>kids</button>
-            <button onClick={()=>filterbyCategory(`&filter=homedecor`)}>Home Decor</button>
-            <button onClick={()=>filterbyCategory(null)}>Reset</button>
-        </div>
-    )
+function FilterbyCategory({ filterbyCategory, selectedFilter, setSelectedFilter }) {
+
+  const handleCategoryClick = (filter) => {
+    filterbyCategory(filter);
+    setSelectedFilter(filter);
+  };
+
+  const handleResetClick = () => {
+    filterbyCategory(null);
+    setSelectedFilter(null);
+  };
+
+  return (
+    <div className="filterbyCategory">
+      <button
+        onClick={() => handleCategoryClick("&filter=men")}
+        disabled={selectedFilter === "&filter=men"}
+      >
+        Men
+      </button>
+      <button
+        onClick={() => handleCategoryClick("&filter=women")}
+        disabled={selectedFilter === "&filter=women"}
+      >
+        Women
+      </button>
+      <button
+        onClick={() => handleCategoryClick("&filter=kids")}
+        disabled={selectedFilter === "&filter=kids"}
+      >
+        kids
+      </button>
+      <button
+        onClick={() => handleCategoryClick("&filter=homedecor")}
+        disabled={selectedFilter === "&filter=homedecor"}
+      >
+        Home Decor
+      </button>
+      <button onClick={handleResetClick} disabled={!selectedFilter}>
+        Reset
+      </button>
+    </div>
+  );
 }
+
 export default FilterbyCategory;

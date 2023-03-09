@@ -9,15 +9,24 @@ function SingleProductPage() {
         const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
         const existingItemIndex = cartItems.findIndex((item) => item.id === state.id);
         if (existingItemIndex !== -1) {
-            alert("This item is already in your cart!");
+            alert("This item is already in your cart!", "alert-warning");
         } else {
             const itemToAdd = { ...state, quantity: 1 };
             cartItems.push(itemToAdd);
             localStorage.setItem("cart", JSON.stringify(cartItems));
-            alert("Item added to your cart!");
+            alert("Item added to your cart!", "alert-success");
         }
     };
-
+    
+    function alert(message, className) {
+        const div = document.createElement("div");
+        div.className = `alert ${className}`;
+        div.appendChild(document.createTextNode(message));
+        document.body.appendChild(div);
+        setTimeout(() => {
+            div.remove();
+        }, 3000);
+    }
 
     useEffect(() => {
         fetch(`https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products/${id}`)

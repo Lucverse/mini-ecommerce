@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [orderState, setOrderState] = useState("default");
 
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem("cart")) || [];
@@ -46,11 +47,23 @@ const CartPage = () => {
   );
 
   const placeOrder = () => {
-    alert("Order placed successfully!");
+    localStorage.setItem("orderedItems", JSON.stringify(cartItems));
     setCartItems([]);
     localStorage.removeItem("cart");
+    setOrderState("done");
+    // alert("Order placed successfully!");
   };
 
+
+  function handleButtonClick() {
+    setOrderState("placing");
+    setTimeout(() => {
+      placeOrder();
+      setTimeout(() => {
+        setOrderState("default");
+      }, 2000);
+    }, 4000);
+  }
   return (
     <div>
       <h1>Cart</h1>
@@ -87,7 +100,18 @@ const CartPage = () => {
               ))
               }
             </div>
-            <button onClick={placeOrder}>Place Order</button>
+            <button
+              className={`place-order place-order--${orderState}`}
+              onClick={handleButtonClick}
+            >
+              <div className="default text">Place Order</div>
+              <div className="forklift">
+                <div className="upper"></div>
+                <div className="lower"></div>
+              </div>
+              <div className="box animation"></div>
+              <div className="done text">Done</div>
+            </button>
           </div>
           : <h1>No Items In Cart</h1>
       }
