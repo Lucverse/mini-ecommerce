@@ -34,7 +34,6 @@ function ProductPage() {
     }
     return (
         <div className="productpage">
-            <h1>Product Page</h1>
             <div>
                 {
                     isLoader ?
