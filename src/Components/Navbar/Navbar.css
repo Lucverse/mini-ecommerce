@@ -6,7 +6,12 @@
     padding: 20px;
     justify-content: space-evenly;  
 }
-.navbar a{
+a{
   color: white;
   text-decoration: none;
+}
+
+.active-link{
+  color: rgb(216, 59, 59);
+  font-weight: bold;
 }
