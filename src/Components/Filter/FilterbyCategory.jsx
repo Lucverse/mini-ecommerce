@@ -12,6 +12,7 @@ function FilterbyCategory({ filterbyCategory, selectedFilter, setSelectedFilter 
 
   return (
     <div className="filterbyCategory">
+      <h2>Filter By Category</h2>
       <button
         onClick={() => handleCategoryClick("&filter=men")}
         disabled={selectedFilter === "&filter=men"}

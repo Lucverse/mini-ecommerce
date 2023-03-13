@@ -13,10 +13,15 @@ const CartPage = () => {
   const incrementQuantity = (item) => {
     const newCartItems = [...cartItems];
     const index = newCartItems.findIndex((x) => x.id === item.id);
-    newCartItems[index].quantity += 1;
-    setCartItems(newCartItems);
-    localStorage.setItem("cart", JSON.stringify(newCartItems));
+    if (newCartItems[index].quantity < 9) {
+      newCartItems[index].quantity += 1;
+      setCartItems(newCartItems);
+      localStorage.setItem("cart", JSON.stringify(newCartItems));
+    } else {
+      alert("You can buy only 9 items at once", "alert-warning");
+    }
   };
+
 
   const decrementQuantity = (item) => {
     const newCartItems = [...cartItems];
@@ -26,9 +31,12 @@ const CartPage = () => {
       setCartItems(newCartItems);
       localStorage.setItem("cart", JSON.stringify(newCartItems));
     } else {
-      removeItem(item);
+      if (window.confirm("This is the last item. Are you sure you want to remove it?")) {
+        removeItem(item);
+      }
     }
   };
+
 
 
   const removeItem = (item) => {
@@ -52,7 +60,7 @@ const CartPage = () => {
     setCartItems([]);
     localStorage.removeItem("cart");
     setOrderState("done");
-    // alert("Order placed successfully!");
+    alert("Order Placed", "alert-success");
   };
 
 
@@ -64,6 +72,16 @@ const CartPage = () => {
         setOrderState("default");
       }, 2000);
     }, 4000);
+  }
+
+  function alert(message, className) {
+    const div = document.createElement("div");
+    div.className = `alert ${className}`;
+    div.appendChild(document.createTextNode(message));
+    document.body.appendChild(div);
+    setTimeout(() => {
+      div.remove();
+    }, 1500);
   }
   return (
     <div>

@@ -11,6 +11,7 @@ function Filter({ sortPage, isSortSelected, setIsSortSelected, currentSort }) {
 
     return (
         <div className="filter">
+            <h2>Sort By price</h2>
             <button
                 onClick={() => handleSortClick("sort=price&order=asc")}
                 disabled={currentSort === "sort=price&order=asc"}
