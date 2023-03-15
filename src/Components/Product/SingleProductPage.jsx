@@ -27,7 +27,6 @@ function SingleProductPage() {
             div.remove();
         }, 1000);
     }
-
     useEffect(() => {
         fetch(`https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products/${id}`)
             .then((res) => res.json())
