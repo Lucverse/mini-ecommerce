@@ -55,5 +55,4 @@ function SingleProductPage() {
         </div>
     );
 }
-
 export default SingleProductPage;
