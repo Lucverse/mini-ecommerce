@@ -14,4 +14,5 @@ function ProductCard({ title, price, image, category, brand }) {
         </div>
     )
 }
+
 export default ProductCard;
