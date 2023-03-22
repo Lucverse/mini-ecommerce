@@ -1,5 +1,4 @@
 
-
 function ProductCard({ title, price, image, category, brand }) {
     return (
         <div className="ProductCard" style={{ color: 'black', backgroundColor: 'white' }}>
