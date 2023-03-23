@@ -8,8 +8,8 @@ function ProductCard({ title, price, image, category, brand }) {
             <div className="ProductCard2">
                 <h2 >{title}</h2>
                 <p><span style={{ fontWeight: 'bold' }}>Price: </span> ₹ {price}</p>
-                    <p><span style={{ fontWeight: 'bold' }}>Category: </span>{category}</p>
-                    <p><span style={{ fontWeight: 'bold' }}>Brand: </span>{brand}</p>
+                <p><span style={{ fontWeight: 'bold' }}>Category: </span>{category}</p>
+                <p><span style={{ fontWeight: 'bold' }}>Brand: </span>{brand}</p>
             </div>
         </div>
     )
