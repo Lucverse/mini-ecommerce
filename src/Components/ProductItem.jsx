@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductItem = ({title,price,image,category}) => {
+const ProductItem = ({ title, price, image, category }) => {
   // console.log('title');
   return (
     <div
@@ -14,7 +14,7 @@ const ProductItem = ({title,price,image,category}) => {
         padding: "1rem",
         marginBottom: "1rem",
         flexDirection: "column",
-        height:'250px'
+        height: '250px'
       }}
     >
       <img data-testid="product-image" src={image} height="100px" alt={title} />
