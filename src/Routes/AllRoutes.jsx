@@ -1,13 +1,20 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./Home";
-import Login from "./Login";
+import ProductPage from "../Components/Product/ProductPage";
+import '../App.css'
+import CartPage from "../Components/Cart/CartPage";
+import Orders from "../Components/Orders/Orders";
+import SingleProductPage from "../Components/Product/SingleProductPage";
+import Pagenotfound from "../Components/Pageoutfound/Pagenotfound";
 function AllRoutes() {
-  return <div>
+  return <div >
     {
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/' element={<ProductPage />} />
+        <Route path='/cart' element={<CartPage />} />
+        <Route path='/orders' element={<Orders />} />
+        <Route path='/products/:id' element={<SingleProductPage />} />
+        <Route path="*" element={<Pagenotfound />} />
       </Routes>
     }
   </div>;
