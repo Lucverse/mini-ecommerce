@@ -18,12 +18,14 @@ function Filter({ sortPage, isSortSelected, setIsSortSelected, currentSort }) {
             >
                 Ascending
             </button>
+
             <button
                 onClick={() => handleSortClick("sort=price&order=desc")}
                 disabled={currentSort === "sort=price&order=desc"}
             >
                 Descending
             </button>
+            
             <button onClick={handleResetClick} disabled={!isSortSelected}>
                 Reset
             </button>
