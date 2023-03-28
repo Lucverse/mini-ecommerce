@@ -9,6 +9,7 @@ function Navbar() {
       <Link to="/" className={location.pathname === "/" ? "active-link" : ""}>Home</Link>
       <Link to="/cart" className={location.pathname === "/cart" ? "active-link" : ""}>Cart</Link>
       <Link to="/orders" className={location.pathname === "/orders" ? "active-link" : ""}>Orders</Link>
+      <Link to="/login" className={location.pathname === "/login" ? "active-link" : ""}>Login</Link>
     </div>
   );
 }

@@ -1,17 +1,18 @@
 .navbar {
-    height: 20px;
-    background-color: #366fe2;
-    color: white;
-    display: flex;
-    padding: 20px;
-    justify-content: space-evenly;  
+  height: 20px;
+  background-color: #1845ad;
+  color: white;
+  display: flex;
+  padding: 20px;
+  justify-content: space-evenly;
 }
-a{
+
+a {
   color: rgb(0, 229, 255);
   text-decoration: none;
 }
 
-.active-link{
+.active-link {
   color: rgb(255, 255, 255);
   font-weight: 800;
 }

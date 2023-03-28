@@ -1,5 +1,4 @@
 .App {
-  background-color: #eeeeee;
   text-align: center;
   padding-bottom: 10px;
   min-height: 98vh;
@@ -45,13 +44,6 @@
     transform: rotate(360deg);
   }
 }
-
-.navbar {
-  height: 50px;
-  background-color: #2b59b5;
-  display: flex;
-}
-
 .productdiv {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

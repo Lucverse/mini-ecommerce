@@ -6,6 +6,7 @@ import CartPage from "../Components/Cart/CartPage";
 import Orders from "../Components/Orders/Orders";
 import SingleProductPage from "../Components/Product/SingleProductPage";
 import Pagenotfound from "../Components/Pageoutfound/Pagenotfound";
+import LoginPage from "../Components/Login/LoginPage";
 function AllRoutes() {
   return <div >
     {
@@ -14,6 +15,7 @@ function AllRoutes() {
         <Route path='/cart' element={<CartPage />} />
         <Route path='/orders' element={<Orders />} />
         <Route path='/products/:id' element={<SingleProductPage />} />
+        <Route path='/login' element={< LoginPage/>} />
         <Route path="*" element={<Pagenotfound />} />
       </Routes>
     }
