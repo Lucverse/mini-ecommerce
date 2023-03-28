@@ -680,3 +680,19 @@
     bottom: 0;   
   }
 }
+/* clear button  */
+.clearButton {
+  background-color: #FED7D7;
+  color: #B91C1C;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  margin-top: 16px;
+  border-radius: 10px;
+}
+
+.clearButton:hover {
+  background-color: #FECACA;
+  cursor: pointer;
+}
