@@ -7,8 +7,11 @@ function LoginPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Email:', email, 'Password:', password);
-    // Here you can perform the login logic with the email and password entered by the user
+    if (email === "Luc" && password === "123") {
+      localStorage.setItem('loginKey', true);
+    } else {
+      alert("Please Check the Credentials");
+    }
   };
 
   return (
