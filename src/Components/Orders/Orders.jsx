@@ -8,8 +8,20 @@ const Orders = () => {
         const items = JSON.parse(localStorage.getItem("orderedItems")) || [];
         setOrders(items);
     }, []);
-    
-
+    const clearItems = () => {
+        localStorage.removeItem("orderedItems");
+        setOrders([]);
+        alert("Orders cleared", "alert-success");
+    };
+    function alert(message, className) {
+        const div = document.createElement("div");
+        div.className = `alert ${className}`;
+        div.appendChild(document.createTextNode(message));
+        document.body.appendChild(div);
+        setTimeout(() => {
+            div.remove();
+        }, 1000);
+    }
 
     return (
         <div>
@@ -39,10 +51,7 @@ const Orders = () => {
                         ))}
 
                     </div>
-                    <button className="clearButton" onClick={() => {
-                        localStorage.removeItem("orderedItems");
-                        setOrders([]);
-                    }}>Clear Orders</button>
+                    <button className="clearButton" onClick={clearItems}>Clear Orders</button>
                 </div>
             ) : (
                 <NoItem />
