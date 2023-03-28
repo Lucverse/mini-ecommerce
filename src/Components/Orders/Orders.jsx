@@ -8,8 +8,8 @@ const Orders = () => {
         const items = JSON.parse(localStorage.getItem("orderedItems")) || [];
         setOrders(items);
     }, []);
-
     
+
 
     return (
         <div>
