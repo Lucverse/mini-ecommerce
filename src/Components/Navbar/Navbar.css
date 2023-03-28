@@ -1,17 +1,17 @@
 .navbar {
     height: 20px;
-    background-color: black;
+    background-color: #366fe2;
     color: white;
     display: flex;
     padding: 20px;
     justify-content: space-evenly;  
 }
 a{
-  color: white;
+  color: rgb(0, 229, 255);
   text-decoration: none;
 }
 
 .active-link{
-  color: rgb(216, 59, 59);
-  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
 }
