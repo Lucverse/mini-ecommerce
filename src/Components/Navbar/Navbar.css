@@ -1,6 +1,6 @@
 .navbar {
   height: 20px;
-  background-color: #1845ad;
+  background-color: #326273;
   color: white;
   display: flex;
   padding: 20px;
@@ -13,6 +13,6 @@ a {
 }
 
 .active-link {
-  color: rgb(255, 255, 255);
+  color:#5C9EAD;
   font-weight: 800;
 }
