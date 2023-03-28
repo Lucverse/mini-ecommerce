@@ -89,3 +89,6 @@ input {
     border-radius: 5px;
     cursor: pointer;
 }
+.loginPage button:hover{
+    background-color: #326273;
+}
