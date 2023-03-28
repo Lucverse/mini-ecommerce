@@ -56,12 +56,15 @@ const CartPage = () => {
   );
 
   const placeOrder = () => {
-    localStorage.setItem("orderedItems", JSON.stringify(cartItems));
+    const orderedItems = JSON.parse(localStorage.getItem("orderedItems")) || [];
+    const mergedItems = [...cartItems, ...orderedItems];
+    localStorage.setItem("orderedItems", JSON.stringify(mergedItems));
     setCartItems([]);
     localStorage.removeItem("cart");
     setOrderState("done");
     alert("Order Placed", "alert-success");
   };
+
 
 
   function handleButtonClick() {
