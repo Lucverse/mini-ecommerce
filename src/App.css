@@ -409,6 +409,50 @@ body {
   box-shadow: inset 0 0 0 100vmax var(--_c);
   color: #fff;
 }
+.confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-overlay .confirm-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.confirm-overlay .confirm-box h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.confirm-overlay .confirm-box p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.confirm-overlay .confirm-box button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.confirm-overlay .confirm-box button.cancel {
+  background-color: #f44336;
+  margin-right: 10px;
+}
 
 .place-order {
   width: 160px;
