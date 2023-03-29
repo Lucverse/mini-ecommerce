@@ -5,6 +5,9 @@
   display: flex;
   padding: 20px;
   justify-content: space-evenly;
+  position: static;
+  top: 0;
+  z-index: 99;
 }
 
 a {
