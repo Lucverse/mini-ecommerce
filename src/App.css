@@ -442,14 +442,19 @@ body {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #4caf50;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
   margin: 5px;
 }
 
-.confirm-overlay .confirm-box button.cancel {
+.confirm-overlay .confirm-box button:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.confirm-overlay .confirm-box .confirm-button{
+  background-color: #4caf50;
+}
+.confirm-overlay .confirm-box .cancel-button {
   background-color: #f44336;
   margin-right: 10px;
 }
@@ -479,6 +484,9 @@ body {
   transform: translateY(20px);
 }
 
+.place-order:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 .place-order:focus {
   outline: none;
 }
@@ -710,18 +718,19 @@ body {
 }
 /* clear button  */
 .clearButton {
-  background-color: #5C9EAD;
-  border-radius: 4px;
-  border: none;
-  padding: 10px 16px;
-  font-size: 16px;
-  margin-top: 16px;
+  width: 160px;
+  height: 60px;
   border-radius: 10px;
+  background-color: #326273;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
 }
-
-.clearButton:hover {  
-  color:#5C9EAD;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+.clearButton:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
 }
 /* home */
