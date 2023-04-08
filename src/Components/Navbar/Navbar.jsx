@@ -3,7 +3,6 @@ import './Navbar.css'
 
 function Navbar() {
   const location = useLocation();
-
   return (
     <div className="navbar">
       <Link to="/" className={location.pathname === "/" ? "active-link" : ""}>Home</Link>
