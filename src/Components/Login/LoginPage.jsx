@@ -1,14 +1,17 @@
-import { useState } from 'react';
 import './LoginPage.css';
+import { ctx } from "../Context/myContext";
+import { useState, useContext } from 'react';
 
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { setIsLoggedIn } = useContext(ctx);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (email === "Luc" && password === "123") {
-      localStorage.setItem('loginKey', true);
+      localStorage.setItem('loginKey', true);      
+      setIsLoggedIn(true);
     } else {
       alert("Please Check the Credentials");
     }
@@ -27,8 +30,7 @@ function LoginPage() {
 
         <label htmlFor="password">Password</label>
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button>Log In</button>
-        
+        <button>Log In</button>        
       </form>
     </div>
   );
