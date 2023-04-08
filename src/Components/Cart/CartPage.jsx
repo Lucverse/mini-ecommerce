@@ -55,7 +55,7 @@ const CartPage = () => {
     setCartItems(newCartItems);
     localStorage.setItem("cart", JSON.stringify(newCartItems));
   };
- 
+
   const cartItemCount = cartItems.reduce(
     (acc, item) => acc + item.quantity,
     0
