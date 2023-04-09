@@ -1,6 +1,6 @@
 function Filter({ sortPage, isSortSelected, setIsSortSelected, currentSort }) {
-    const handleSortClick = (sortOption) => {
-        sortPage(sortOption);
+    const handleSortSelect = (event) => {
+        sortPage(event.target.value);
         setIsSortSelected(true);
     };
 
@@ -9,26 +9,22 @@ function Filter({ sortPage, isSortSelected, setIsSortSelected, currentSort }) {
         setIsSortSelected(false);
     };
 
+    const options = [
+        { value: "", label: "Select an option" },
+        { value: "sort=price&order=asc", label: "Price: Low to High" },
+        { value: "sort=price&order=desc", label: "Price: High to Low" },
+    ];
+
     return (
         <div className="filter">
             <h2>Sort By price</h2>
-            <button
-                onClick={() => handleSortClick("sort=price&order=asc")}
-                disabled={currentSort === "sort=price&order=asc"}
-            >
-                Ascending
-            </button>
-
-            <button
-                onClick={() => handleSortClick("sort=price&order=desc")}
-                disabled={currentSort === "sort=price&order=desc"}
-            >
-                Descending
-            </button>
-            
-            <button onClick={handleResetClick} disabled={!isSortSelected}>
-                Reset
-            </button>
+            <select onChange={handleSortSelect} value={currentSort}>
+                {options.map((option) => (
+                    <option key={option.value} value={option.value}>
+                        {option.label}
+                    </option>
+                ))}
+            </select>
         </div>
     );
 }

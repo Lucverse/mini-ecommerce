@@ -4,6 +4,7 @@
   min-height: 98vh;
   min-width: min-content;
 }
+
 body {
   background-color: #EEEEEE;
 }
@@ -37,6 +38,7 @@ body {
     transform: rotate(360deg);
   }
 }
+
 .productdiv {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -63,10 +65,11 @@ body {
   .productdiv {
     grid-template-columns: auto;
   }
-  .mainSingleProudctCard .SingleProductCard{
+
+  .mainSingleProudctCard .SingleProductCard {
     border: 1px solid black;
     display: grid;
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 }
 
@@ -80,8 +83,9 @@ body {
   padding: 20px 0px 10px 0px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   display: grid;
-  grid-template-rows: repeat(2,1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
+
 .ProductCard img {
   border-radius: 5px;
 }
@@ -91,6 +95,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+
 .mainSingleProudctCard {
   background-color: white;
   margin: auto;
@@ -100,10 +105,12 @@ body {
   width: 60%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.mainSingleProudctCard img{
+
+.mainSingleProudctCard img {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 .product-image {
   margin: auto;
 }
@@ -302,15 +309,19 @@ body {
   padding: 50px;
   gap: 50px;
 }
+
 @media only screen and (max-width: 1024px) {
+
   .ordersPage,
   .cartPage {
     padding: 20px;
   }
+
   .product-image img {
     width: 150px;
   }
-  .mainSingleProudctCard{
+
+  .mainSingleProudctCard {
     width: 80%;
   }
 }
@@ -327,10 +338,12 @@ body {
     grid-template-rows: auto;
     padding: 20px;
   }
-  .mainSingleProudctCard{    
+
+  .mainSingleProudctCard {
     width: 90%;
   }
 }
+
 .cartPage .SingleProductCard,
 .ordersPage .SingleProductCard {
   padding: 20px;
@@ -409,6 +422,7 @@ body {
   box-shadow: inset 0 0 0 100vmax var(--_c);
   color: #fff;
 }
+
 .confirm-overlay {
   position: fixed;
   top: 0;
@@ -438,6 +452,7 @@ body {
   font-size: 16px;
   margin-bottom: 30px;
 }
+
 .confirm-overlay .confirm-box button {
   padding: 10px 20px;
   border: none;
@@ -448,12 +463,14 @@ body {
   margin: 5px;
 }
 
-.confirm-overlay .confirm-box button:hover{
+.confirm-overlay .confirm-box button:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.confirm-overlay .confirm-box .confirm-button{
+
+.confirm-overlay .confirm-box .confirm-button {
   background-color: #4caf50;
 }
+
 .confirm-overlay .confirm-box .cancel-button {
   background-color: #f44336;
   margin-right: 10px;
@@ -484,9 +501,10 @@ body {
   transform: translateY(20px);
 }
 
-.place-order:hover{
+.place-order:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 .place-order:focus {
   outline: none;
 }
@@ -662,6 +680,7 @@ body {
   border-radius: 5px;
   z-index: 9;
 }
+
 .alert-success {
   background-color: #28a745;
   color: white;
@@ -691,31 +710,40 @@ body {
 
 /* no item */
 /* page not found */
-.PageNotFound, .noitem{
+.PageNotFound,
+.noitem {
   text-align: center;
   width: 80%;
   margin: auto;
 }
-.noitem{
+
+.noitem {
   width: 50%;
 }
-.PageNotFound img, .noitem img{
+
+.PageNotFound img,
+.noitem img {
   width: 60%;
 }
 
 @media only screen and (max-width: 768px) {
-  .PageNotFound img, .noitem img{
+
+  .PageNotFound img,
+  .noitem img {
     width: 70%;
   }
 }
+
 @media only screen and (max-width: 425px) {
-  .PageNotFound h1{
+  .PageNotFound h1 {
     font-size: 15px;
   }
-  .PageNotFound .button-css{
-    bottom: 0;   
+
+  .PageNotFound .button-css {
+    bottom: 0;
   }
 }
+
 /* clear button  */
 .clearButton {
   width: 160px;
@@ -729,6 +757,7 @@ body {
   color: #fff;
   font-weight: bold;
 }
+
 .clearButton:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;

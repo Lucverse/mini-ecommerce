@@ -1,8 +1,8 @@
 function FilterbyCategory({ filterbyCategory, selectedFilter, setSelectedFilter }) {
 
-  const handleCategoryClick = (filter) => {
-    filterbyCategory(filter);
-    setSelectedFilter(filter);
+  const handleCategorySelect = (event) => {
+    filterbyCategory(event.target.value);
+    setSelectedFilter(event.target.value);
   };
 
   const handleResetClick = () => {
@@ -10,36 +10,24 @@ function FilterbyCategory({ filterbyCategory, selectedFilter, setSelectedFilter 
     setSelectedFilter(null);
   };
 
+  const options = [
+    { value: null, label: "Select a category" },
+    { value: "&filter=men", label: "Men" },
+    { value: "&filter=women", label: "Women" },
+    { value: "&filter=kids", label: "Kids" },
+    { value: "&filter=homedecor", label: "Home Decor" },
+  ];
+
   return (
     <div className="filterbyCategory">
       <h2>Filter By Category</h2>
-      <button
-        onClick={() => handleCategoryClick("&filter=men")}
-        disabled={selectedFilter === "&filter=men"}
-      >
-        Men
-      </button>
-      <button
-        onClick={() => handleCategoryClick("&filter=women")}
-        disabled={selectedFilter === "&filter=women"}
-      >
-        Women
-      </button>
-      <button
-        onClick={() => handleCategoryClick("&filter=kids")}
-        disabled={selectedFilter === "&filter=kids"}
-      >
-        kids
-      </button>
-      <button
-        onClick={() => handleCategoryClick("&filter=homedecor")}
-        disabled={selectedFilter === "&filter=homedecor"}
-      >
-        Home Decor
-      </button>
-      <button onClick={handleResetClick} disabled={!selectedFilter}>
-        Reset
-      </button>
+      <select onChange={handleCategorySelect} value={selectedFilter || ''}>
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
     </div>
   );
 }
