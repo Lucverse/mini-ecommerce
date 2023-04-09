@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import AllRoutes from "./Routes/AllRoutes";
 import Navbar from "./Components/Navbar/Navbar";
-import { ctx } from './Components/Context/myContext';
+import { ctx } from './Components/Context/LoginContext';
 import LoginPage from "./Components/Login/LoginPage";
 
 function App() {

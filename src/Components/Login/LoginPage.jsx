@@ -1,5 +1,5 @@
 import './LoginPage.css';
-import { ctx } from "../Context/myContext";
+import { ctx } from "../Context/LoginContext";
 import { useState, useContext } from 'react';
 
 function LoginPage() {
