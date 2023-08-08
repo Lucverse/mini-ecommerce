@@ -1,17 +1,21 @@
 .navbar {
-    height: 20px;
-    background-color: black;
-    color: white;
-    display: flex;
-    padding: 20px;
-    justify-content: space-evenly;  
-}
-a{
+  height: 20px;
+  background-color: #326273;
   color: white;
+  display: flex;
+  padding: 20px;
+  justify-content: space-evenly;
+  position: static;
+  top: 0;
+  z-index: 99;
+}
+
+a {
+  color: rgb(0, 229, 255);
   text-decoration: none;
 }
 
-.active-link{
-  color: rgb(216, 59, 59);
-  font-weight: bold;
+.active-link {
+  color:#5C9EAD;
+  font-weight: 800;
 }
